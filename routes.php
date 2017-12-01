@@ -1,3 +1,4 @@
+
 <?php
 
 use Project\Db\QueryBuilder;
@@ -74,14 +75,21 @@ switch ($uri) {
 	case '/coursePage':
 	  	$courseController->courseClick();
 		break;
-
+	case '/createCourseView':
+		$courseController->courseCreateView();
+		break;
 	case '/createCourse':
 		$courseController->courseCreate();
 		break;
+
 	case '/panelTeacher':
 		$courseController->teacherPanel();
 		break;
-	
+
+	case '/postVideo':
+		$courseController->postVideo();
+	 	break;
+
 	case '/courseVideo':
 	  $courseController->watchVideo();	
 	  break;

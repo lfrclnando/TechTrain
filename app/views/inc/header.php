@@ -14,6 +14,26 @@
             .image-teste{
                 width: 200px;
                 height: 200px;
+
+            }
+            .teste{
+                width: 1280px;
+                height: 753px;
+                
+            }
+
+            .Tpicture{
+                width: 250px;
+                height: 250px;
+                
+            }            
+
+            .custom-file-control:lang(en)::after {
+            content: "Choose file...";
+            }
+
+            .custom-file-control:lang(en)::before {
+            content: "Browse";
             }
         </style>
     </head>
@@ -35,8 +55,8 @@
                                 <ul class="nav nav-tabs" role="tablist">
                                     <li role="presentation" class="<?= $uri == '/' ? 'active' : ''  ?>"><a href="/">Home</a></li>
                                     <li class="curso <?= $uri == '/courses' ? 'active' : ''  ?>"  role="presentation"><a href="/courses">Cursos</a></li>
-                                    <li class="blog <?= $uri == '/blog' ? 'active' : ''  ?>" role="presentation"><a href="/blog">Blog</a></li>
-                                    <li class="cert <?= $uri == '/certify' ? 'active' : ''  ?>" role="presentation"><a href="/certify">Certificados</a></li>
+                                    <li class="blog <?= $uri == '#' ? 'active' : ''  ?>" role="presentation"><a href="#">Blog</a></li>
+                                    <li class="cert <?= $uri == '#' ? 'active' : ''  ?>" role="presentation"><a href="#">Certificados</a></li>
                                     <!--Verifica se o usuário não está logado-->
                                     <?php 
                                        if (isset($_SESSION['logged']) && $_SESSION['logged']){
@@ -58,7 +78,7 @@
                                                                 <a href="/myCourses"><h5>Meus Cursos</h5></a>
                                                                 <a href="/notify"><h5>Notificações</h5></a>
                                                                 <hr>
-                                                                <a href="/createCourse"><h5>Criar um Curso</h5></a>
+                                                                <a href="/createCourseView"><h5>Criar um Curso</h5></a>
                                                                 <a href="/panelTeacher"><h5>Painel de Professor</h5></a>
                                                                 <a href="/editTeacher"><h5>Perfil Instrutor</h5></a>
                                                                 <hr>
